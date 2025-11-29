@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#140b29,#201245,#2d1f55);
+    min-height:100vh;
+    color:#2a2038;
+    overflow-x:hidden;
+    opacity:0;
+    animation:fadeIn .6s forwards;
+}
+
+@keyframes fadeIn{to{opacity:1}}
+
+.page{
+    max-width:900px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.stars,.floating-hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+}
+
+.hero-card,.section{
+    background:#fffafc;
+    border-radius:24px;
+    padding:30px 24px;
+    text-align:center;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.hero-heart{
+    font-size:3rem;
+    animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.15)}
+}
+
+h1,h2{
+    font-family:"Playfair Display",serif;
+    margin:16px 0;
+}
+
+p{
+    font-size:.95rem;
+    line-height:1.7;
+    color:#6b6278;
+}
+
+span{color:#ff4d6d;font-weight:600}
+
+.btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:10px 26px;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:#fff;
+    text-decoration:none;
+    font-size:.9rem;
+}
+
+.section.center{text-align:center;margin-top:24px}
+
+.promise-grid,.counter-grid{
+    display:grid;
+    gap:16px;
+}
+
+.promise-card,.counter-card,.letter-card{
+    background:white;
+    padding:15px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.memory-strip{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+}
+.memory-card{
+    min-width:180px;
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+}
+.memory-card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+}
+
+.music-btn{
+    position:fixed;
+    top:16px;
+    right:16px;
+    border:none;
+    border-radius:50%;
+    width:44px;
+    height:44px;
+    background:#ff4d6d;
+    color:#fff;
+    cursor:pointer;
+}
+
+.page-fade-out{
+    opacity:0;
+    transition:.4s;
+}
+/* Romantic love page styles */
+.love-hero{
+    background: radial-gradient(circle at top,
+        rgba(255,77,109,.18),
+        transparent 60%),
+        #fffafc;
+}
+
+.love-heart{
+    font-size:3.5rem;
+    animation:heartbeat 1.4s infinite;
+    margin-bottom:10px;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.25)}
+}
+
+.counter-card.romantic{
+    background:linear-gradient(135deg,
+        rgba(255,77,109,.12),
+        #ffffff 70%);
+    border:1px solid rgba(255,77,109,.25);
+}
+
+.love-quote p{
+    font-size:.95rem;
+    line-height:1.8;
+    color:#6b6278;
+}
+
+.btn.glow{
+    box-shadow:0 0 18px rgba(255,77,109,.6);
+}

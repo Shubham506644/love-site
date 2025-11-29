@@ -1,0 +1,177 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #140b29, #201245, #2d1f55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Floating hearts background */
+.hearts-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.float-heart {
+    position: absolute;
+    font-size: 1.6rem;
+    animation: float 6s linear forwards;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(110vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* Main calculator card */
+.calc-card {
+    position: relative;
+    z-index: 2;
+    background: #fffafc;
+    max-width: 420px;
+    width: 100%;
+    padding: 32px 26px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* Title */
+.calc-card h2,
+h2 {
+    color: #ff4d6d;
+    margin-bottom: 16px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Main button */
+button {
+    margin-top: 14px;
+    padding: 10px 26px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: #ff4d6d;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Calculating heart icon */
+.calc-heart {
+    font-size: 2.8rem;
+    margin-top: 18px;
+    display: none;
+    animation: pulse 0.9s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+/* Result text */
+.result {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    color: #2a2038;
+    line-height: 1.6;
+}
+
+.result span {
+    color: #ff4d6d;
+    font-weight: 600;
+}
+
+/* Action buttons (Recalculate, Download, Back) */
+.actions {
+    margin-top: 22px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions button,
+.actions a {
+    padding: 8px 18px;
+    border-radius: 22px;
+    background: white;
+    color: #ff4d6d;
+    border: 1px solid #ff4d6d;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* Burst hearts when 100% */
+.burst-heart {
+    position: fixed;
+    font-size: 2rem;
+    animation: burst 1.8s ease-out forwards;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes burst {
+    from {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.4) translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+/* Same floating hearts like other pages */
+.floating-hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.flow-heart{
+    position:absolute;
+    font-size:1.6rem;
+    animation:flowUp linear forwards;
+    filter:drop-shadow(0 6px 12px rgba(255,90,120,.25));
+}
+
+@keyframes flowUp{
+    from{
+        transform:translateY(110vh) scale(.9);
+        opacity:.9;
+    }
+    to{
+        transform:translateY(-10vh) scale(1.1);
+        opacity:0;
+    }
+}

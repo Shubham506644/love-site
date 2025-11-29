@@ -1,20 +1,4 @@
-/* music */
-const music=document.getElementById("music");
-const musicBtn=document.getElementById("musicBtn");
 
-document.addEventListener("click",()=>{
-    if(music){
-        music.muted=false;
-        music.volume=0.4;
-        music.play().catch(()=>{});
-    }
-},{once:true});
-
-if(musicBtn){
-    musicBtn.onclick=()=>{
-        music.paused?music.play():music.pause();
-    };
-}
 
 /* floating hearts */
 setInterval(()=>{
@@ -56,3 +40,4 @@ if(typed){
         }
     })();
 }
+

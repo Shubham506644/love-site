@@ -106,19 +106,6 @@ span{color:#ff4d6d;font-weight:600}
     object-fit:cover;
 }
 
-.music-btn{
-    position:fixed;
-    top:16px;
-    right:16px;
-    border:none;
-    border-radius:50%;
-    width:44px;
-    height:44px;
-    background:#ff4d6d;
-    color:#fff;
-    cursor:pointer;
-}
-
 .page-fade-out{
     opacity:0;
     transition:.4s;
@@ -158,3 +145,4 @@ span{color:#ff4d6d;font-weight:600}
 .btn.glow{
     box-shadow:0 0 18px rgba(255,77,109,.6);
 }
+
